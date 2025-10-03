@@ -5,9 +5,17 @@ import "./home.css";
 const Home = () => {
   return (
     <div className="home">
-      {/* Banner Image */}
+      {/* Banner Section with Overlay Text */}
       <section className="bolt-banner">
         <img src="/bg.png" alt="Fastener Bolt Banner" />
+        <div className="banner-content">
+          <h2>Strong. Reliable. Durable.</h2>
+          <p>
+            Discover premium quality fasteners, bolts, and construction essentials 
+            trusted across the UAE for strength and performance.
+          </p>
+          <a href="/about" className="btn-link banner-btn">Learn More</a>
+        </div>
       </section>
 
       {/* Hero Section */}
