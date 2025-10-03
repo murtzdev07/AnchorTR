@@ -1,0 +1,152 @@
+.footer {
+  background-color: #111827; /* Dark gray footer */
+  color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  padding: 10px 50px 10px; /* compact footer */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  gap: 25px;
+}
+/* Logo in footer */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between logo and text */
+}
+
+.footer-logo {
+  width: 115px; /* adjust size */
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Footer text remains as before */
+.footer-text h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #CFAF70; /* Gold */
+}
+
+.footer-text h2 span {
+  color: #ffffff;
+}
+
+.footer-text p {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+/* Keep the rest of your CSS as is */
+
+/* --- Brand Section --- */
+.footer-brand h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #CFAF70; /* Gold */
+}
+
+.footer-brand h2 span {
+  color: #ffffff; /* White */
+}
+
+.footer-brand p {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+/* --- Section Headings --- */
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #CFAF70; /* Gold headings */
+}
+
+/* --- Links --- */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 6px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #d1d5db;
+  transition: color 0.3s;
+  font-size: 0.85rem;
+}
+
+.footer-links ul li a:hover {
+  color: #CFAF70; /* Gold hover */
+}
+
+/* --- Contact --- */
+.footer-contact p {
+  margin: 4px 0;
+  color: #d1d5db;
+  font-size: 0.85rem;
+}
+
+/* --- Social Icons --- */
+.footer-social .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social .social-icons a {
+  color: #d1d5db;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #CFAF70; /* Gold hover */
+  transform: scale(1.15);
+}
+
+/* --- Bottom Bar --- */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  border-top: 1px solid #374151;
+  padding-top: 12px;
+}
+.footer-contact a {
+  color: #9a804b;  /* gold to match your theme */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #b89650; /* darker gold on hover */
+  text-decoration: underline;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer-links, .footer-contact, .footer-social {
+    text-align: center;
+  }
+}

@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+header {
+  background: #fff;
+}
+header a {
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  background: #f9f9f9;
+}
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 800;
+}
+.hero p {
+  font-size: 1.4rem;
+}
+.hero button {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Card hover */
+.card:hover {
+  transform: translateY(-5px);
+}

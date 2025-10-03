@@ -1,0 +1,55 @@
+.about {
+  position: relative;
+  background-color: #fff; /* White base */
+  color: #111827; /* Dark Gray text */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Background image with low opacity, same as Home/Contact */
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/public/anchorbgblc.svg") center/cover no-repeat;
+  opacity: 0.04; /* Low transparency */
+  z-index: 0; /* behind all content */
+}
+
+.about-container {
+  position: relative;
+  z-index: 1; /* above background */
+  background-color: rgba(249, 249, 249, 0.9); /* light gray overlay for readability */
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #9a804b; /* Gold highlight for consistency */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #111827; /* Dark gray text */
+  z-index: 1;
+}

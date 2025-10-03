@@ -1,0 +1,218 @@
+.home {
+  background-color: #ffffff;
+  color: #111827;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/anchorbgblc.svg") center/cover no-repeat;
+  opacity: 0.04;
+  z-index: -1;
+}
+
+/* Banner */
+.bolt-banner img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #CFAF70;
+  z-index: 1;
+}
+
+.hero h1 span {
+  color: #111827;
+  z-index: 1;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  color: #4b5563;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+
+/* Hero Button (as link) */
+.hero a {
+  display: inline-block;
+  background-color: #CFAF70;
+  color: #111827;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.hero a:hover {
+  background-color: #b89650;
+  color: #fff;
+}
+
+/* Categories Section */
+.categories {
+  text-align: center;
+  padding: 60px 20px;
+  z-index: 1;
+}
+
+.categories h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.categories p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+
+/* Tabs */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.category-tabs a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.tab-icon {
+  font-size: 1rem;
+}
+
+
+.category-tabs a.active,
+.category-tabs a:hover {
+  background: #CFAF70;
+  color: #111827;
+  border-color: #CFAF70;
+}
+
+/* Grid */
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1;
+}
+
+.category-card {
+  width: 220px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 1;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.category-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+
+.category-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+/* Category Button as Link */
+.category-card a {
+  display: inline-block;
+  background: #CFAF70;
+  color: #111827;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.category-card a:hover {
+  background: #b89650;
+  color: #fff;
+}
+
+/* View More */
+.view-more {
+  margin-top: 30px;
+  z-index: 1;
+}
+
+.view-more a {
+  display: inline-block;
+  background: #111827;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.view-more a:hover {
+  background: #CFAF70;
+  color: #111827;
+  z-index: 1;
+}
