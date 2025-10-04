@@ -1,36 +1,55 @@
 .footer {
-  background-color: #111827; /* Dark gray footer */
+  background-color: #111827;
   color: #f9f9f9;
   font-family: Arial, sans-serif;
-  padding: 10px 50px 10px; /* compact footer */
+  padding: 25px 50px;
 }
 
+/* Layout Container */
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1000px;
-  margin: auto;
-  gap: 25px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;
 }
-/* Logo in footer */
-.footer-brand {
+
+/* --- Left Section --- */
+.footer-left {
   display: flex;
-  align-items: center;
-  gap: 12px; /* space between logo and text */
+  align-items: center;          /* Ensures vertical centering */
+  justify-content: flex-start;
+  gap: 20px;
+  flex: 1;
+  min-width: 320px;
+  height: 100%; 
+  margin-top: 30px;               /* Makes alignment relative to full footer height */
 }
 
 .footer-logo {
-  width: 115px; /* adjust size */
+  width: 110px;
   height: auto;
-  border-radius: 5px;
+  border-radius: 8px;
+  display: block;
+  object-fit: contain;
+  align-self: center;           /* Ensures the logo is truly centered in its flex line */
 }
 
-/* Footer text remains as before */
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* Centers text block vertically */
+  align-self: center;           /* Double alignment assurance */
+}
+
 .footer-text h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #CFAF70; /* Gold */
+  color: #CFAF70;
+  margin: 0 0 6px 0;
+  line-height: 1.2;
 }
 
 .footer-text h2 span {
@@ -38,40 +57,35 @@
 }
 
 .footer-text p {
-  margin-top: 6px;
-  font-size: 0.85rem;
+  margin: 0;
+  font-size: 0.95rem;
   color: #d1d5db;
+  line-height: 1.5;
+  max-width: 360px;
 }
 
-/* Keep the rest of your CSS as is */
 
-/* --- Brand Section --- */
-.footer-brand h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #CFAF70; /* Gold */
+
+/* --- Right Section --- */
+.footer-right {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 0px;
+  flex: 2;
+  min-width: 450px;
+  margin-left: 80px;
 }
 
-.footer-brand h2 span {
-  color: #ffffff; /* White */
-}
-
-.footer-brand p {
-  margin-top: 6px;
-  font-size: 0.85rem;
-  color: #d1d5db;
-}
-
-/* --- Section Headings --- */
+/* Section Headings */
 .footer-links h3,
 .footer-contact h3,
 .footer-social h3 {
   font-size: 1rem;
   margin-bottom: 10px;
-  color: #CFAF70; /* Gold headings */
+  color: #CFAF70;
 }
 
-/* --- Links --- */
+/* --- Quick Links --- */
 .footer-links ul {
   list-style: none;
   padding: 0;
@@ -79,74 +93,93 @@
 }
 
 .footer-links ul li {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .footer-links ul li a {
   text-decoration: none;
   color: #d1d5db;
   transition: color 0.3s;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .footer-links ul li a:hover {
-  color: #CFAF70; /* Gold hover */
+  color: #CFAF70;
 }
+
+.footer-links {
+  padding-left: 40px;
+  border-left: 1px solid #2c2f36;
+}
+
 
 /* --- Contact --- */
 .footer-contact p {
   margin: 4px 0;
   color: #d1d5db;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
-/* --- Social Icons --- */
-.footer-social .social-icons {
-  display: flex;
-  gap: 10px;
-}
-
-.footer-social .social-icons a {
-  color: #d1d5db;
-  font-size: 1rem;
-  transition: color 0.3s, transform 0.3s;
-}
-
-.footer-social .social-icons a:hover {
-  color: #CFAF70; /* Gold hover */
-  transform: scale(1.15);
-}
-
-/* --- Bottom Bar --- */
-.footer-bottom {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.8rem;
-  color: #9ca3af;
-  border-top: 1px solid #374151;
-  padding-top: 12px;
-}
 .footer-contact a {
-  color: #9a804b;  /* gold to match your theme */
+  color: #9a804b;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .footer-contact a:hover {
-  color: #b89650; /* darker gold on hover */
+  color: #b89650;
   text-decoration: underline;
 }
 
+/* --- Social Icons --- */
+.footer-social .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
+.footer-social .social-icons a {
+  color: #d1d5db;
+  font-size: 1.2rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #CFAF70;
+  transform: scale(1.15);
+}
+
+/* --- Bottom Bar --- */
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.85rem;
+  color: #9ca3af;
+  border-top: 1px solid #374151;
+  padding-top: 12px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 900px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-  }
-  .footer-links, .footer-contact, .footer-social {
     text-align: center;
+    gap: 35px;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-right {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-social .social-icons {
+    justify-content: center;
   }
 }

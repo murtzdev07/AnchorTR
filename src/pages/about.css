@@ -2,16 +2,12 @@
   position: relative;
   background-color: #fff; /* White base */
   color: #111827; /* Dark Gray text */
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: auto; /* remove forced full height */
   padding: 60px 20px;
   overflow: hidden;
   font-family: Arial, sans-serif;
 }
 
-/* Background image with low opacity, same as Home/Contact */
 .about::before {
   content: "";
   position: absolute;
@@ -21,35 +17,171 @@
   height: 100%;
   background: url("/public/anchorbgblc.svg") center/cover no-repeat;
   opacity: 0.04; /* Low transparency */
-  z-index: 0; /* behind all content */
+  z-index: 0;
 }
 
 .about-container {
   position: relative;
-  z-index: 1; /* above background */
-  background-color: rgba(249, 249, 249, 0.9); /* light gray overlay for readability */
+  z-index: 1;
+  background-color: #ffffff; /* pure white card for clarity */
   padding: 40px;
   border-radius: 12px;
   max-width: 900px;
   width: 100%;
   text-align: center;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  border: 1px solid #eee;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* lighter, subtle shadow */
+  border: 1px solid #f1f1f1;
+  margin: 0 auto 60px auto; /* ensures spacing before expertise */
 }
 
 .about h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #9a804b; /* Gold highlight for consistency */
+  color: #9a804b; /* Gold highlight */
   text-transform: uppercase;
   letter-spacing: 2px;
-  z-index: 1;
 }
 
 .about p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 20px;
-  color: #111827; /* Dark gray text */
+  color: #374151; /* Slightly softer gray */
+}
+
+/* Expertise Section */
+.expertise {
+  background: url("/public/anchorbgblc.svg") center/cover no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.expertise::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(17, 24, 39, 0.85); /* deeper dark overlay for contrast */
+  z-index: 0;
+}
+
+.expertise h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  position: relative;
   z-index: 1;
+  color: #cfae70; /* Gold heading */
+}
+
+.expertise p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #d1d5db; /* lighter gray text */
+  position: relative;
+  z-index: 1;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.expertise-card {
+  background: rgba(250, 247, 247, 0.05);
+  border: 1px solid #cfae70;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  color: #fff;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.expertise-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(207, 174, 112, 0.3); /* golden glow */
+}
+
+.expertise-card .icon {
+  font-size: 2.5rem;
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+.expertise-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #f9fafb;
+}
+
+.expertise-card p {
+  font-size: 0.95rem;
+  color: #d1d5db;
+}
+/* Reviews Section */
+.reviews-section {
+  background-color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  color: #9a804b;
+  margin-bottom: 30px;
+}
+
+.reviews-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollReviews 25s linear infinite;
+  width: max-content;
+}
+
+.review-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  min-width: 280px;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 0 0 auto;
+  text-align: left;
+}
+
+.review-card h4 {
+  color: #111827;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 15px;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 1.2rem;
+}
+
+/* Infinite Scroll Animation */
+@keyframes scrollReviews {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

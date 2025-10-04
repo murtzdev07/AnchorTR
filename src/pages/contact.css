@@ -9,9 +9,11 @@
   color: #111827; /* dark gray text */
   background-color: #ffffff; /* white fallback */
   overflow: hidden;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-/* Background image with low transparency (same as Home page) */
+/* Background image with low transparency */
 .contact::before {
   content: "";
   position: absolute;
@@ -19,36 +21,71 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/public/anchorbgblc.svg") center/cover no-repeat; /* replace with your image path */
+  background: url("/public/anchorbgblc.svg") center/cover no-repeat;
   opacity: 0.04; /* low transparency */
-  z-index: 0; /* behind all content */
+  z-index: 0;
 }
 
-/* Ensure form container is above background */
-.contact-container {
+/* Contact Title */
+.contact > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #9a804b; /* gold heading */
   position: relative;
   z-index: 1;
-  background-color: rgba(249, 249, 249, 0.9); 
-  padding: 40px;
-  border-radius: 12px;
-  max-width: 700px;
-  width: 100%;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.contact-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #9a804b; /* gold heading */
-}
-
-.contact-container p {
+.contact > p {
   font-size: 1rem;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   color: #4b5563; /* medium gray */
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
+/* Container for all cards */
+.contact-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+/* Individual cards */
+.contact-card {
+  background-color: rgba(249, 249, 249, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #9a804b;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #374151; /* dark gray */
+}
+
+/* Form styles */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -58,6 +95,7 @@
   border: 1px solid #ccc;
   font-size: 1rem;
   resize: none;
+  box-sizing: border-box;
 }
 
 .contact-form button {
@@ -70,9 +108,118 @@
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .contact-form button:hover {
   background-color: #b89650; /* darker gold hover */
   color: #ffffff;
+}
+
+/* Map iframe */
+.contact-card iframe {
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 100%;
+  height: 250px;
+  box-sizing: border-box;
+}
+
+/* WhatsApp Form Wrapper */
+/* WhatsApp Form */
+.whatsapp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* WhatsApp Textarea */
+.whatsapp-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 100px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-form textarea:focus {
+  border-color: #25D366;
+  box-shadow: 0 0 5px rgba(37, 211, 102, 0.3);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: #25D366; /* WhatsApp green */
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.whatsapp-btn .wa-icon {
+  font-size: 1.3rem;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5c;
+  transform: scale(1.05);
+}
+
+/* Note below WhatsApp form */
+.wa-note {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.wa-note a {
+  color: #25D366;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.wa-note a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact > h1 {
+    font-size: 2rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .whatsapp-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }

@@ -7,10 +7,12 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Left Side: Logo + Names */}
       <div className="navbar-brand">
-        <img src={logo} alt="Company Logo" className="navbar-logo" />
+         <a href="/">
+ <img src={logo} alt="Company Logo" className="navbar-logo" /> </a>
         <div className="navbar-text">
-          <h1 className="company-name-en">ANCHOR TR. L.L.C</h1>
-          <h2 className="company-name-ar"> المرساة للتجارة ذ.م.م</h2>
+        <h2 className="company-name-ar"> المرساة للتجارة ذ.م.م</h2>
+        <h1 className="company-name-en">ANCHOR TR. L.L.C</h1>
+          
         </div>
       </div>
 

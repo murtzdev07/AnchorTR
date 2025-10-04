@@ -7,14 +7,14 @@ function Downloads() {
   const files = [
     {
       name: "Product Catalog",
-      path: "/assets/Catalog.pdf",
+      path: "/Catalog.pdf",
       thumbnail: "/Cat_thumb.png",
     },
-    // {
-    //   name: "Company Profile",
-    //   path: "/assets/CompanyProfile.pdf",
-    //   thumbnail: "/assets/thumbnails/CompanyProfile.png",
-    // },
+    {
+      name: "Visiting Card",
+      path: "/visiting.pdf",
+      thumbnail: "/card_thumb.png",
+    },
   ];
 
   return (
