@@ -93,7 +93,9 @@ function Contact() {
           <h2>Our Location</h2>
           <p>
             Anchor TR L.L.C.<br />
-            Sharjah, UAE
+            Al Fahad Building , Shop #13 ,
+            Industrial Area No. 5 , Maliha
+            Road Sharjah UAE
           </p>
 
           <div className="map-wrapper">

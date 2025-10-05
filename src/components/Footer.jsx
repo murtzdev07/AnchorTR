@@ -55,6 +55,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Anchor TR L.L.C. All rights reserved.</p>
+        <p>Designed & Developed by Murtaza Dawoodji. +91 8208266645</p>
       </div>
     </footer>
   );
