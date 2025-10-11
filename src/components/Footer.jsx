@@ -37,6 +37,7 @@ const Footer = () => {
             <h3>Contact Us</h3>
             <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Sharjah,UAE" target="_blank" rel="noopener noreferrer">Sharjah, UAE</a></p>
             <p>📞 <a href="tel:+97165431412">+971 6543 1412</a></p>
+            <p>💬 <a href="https://wa.me/+971507473289">+971 50 747 3289 </a></p>
             <p>✉️ <a href="mailto:info@anchortrdg.com">info@anchortrdg.com</a></p>
           </div>
 
